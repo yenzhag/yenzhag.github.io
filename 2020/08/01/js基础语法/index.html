@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="zh-cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>javaScript基础语法（变量、运算符） | 小楊.</title><meta name="keywords" content="javaScript"><meta name="author" content="Six"><meta name="copyright" content="Six"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前端基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javaScript基础语法（变量、运算符）">
+<meta property="og:url" content="https://yangzhe0712.gitee.io/2020/08/01/js%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="小楊.">
+<meta property="og:description" content="前端基础">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img2.baidu.com/it/u=3258393571,209085186&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=332">
+<meta property="article:published_time" content="2020-08-01T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-01T11:07:13.867Z">
+<meta property="article:author" content="Six">
+<meta property="article:tag" content="javaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img2.baidu.com/it/u=3258393571,209085186&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=332"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yangzhe0712.gitee.io/2020/08/01/js%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'javaScript基础语法（变量、运算符）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-08-01 19:07:13'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.bmp.ovh/imgs/2022/08/01/c67de851c967a27e.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://img2.baidu.com/it/u=3258393571,209085186&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=640&amp;h=332')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">小楊.</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">javaScript基础语法（变量、运算符）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-08-01T00:00:00.000Z" title="Created 2020-08-01 08:00:00">2020-08-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-08-01T11:07:13.867Z" title="Updated 2022-08-01 19:07:13">2022-08-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="javaScript基础语法（变量、运算符）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>变量定义语法</strong></p>
+<p><strong>var 标识符;</strong></p>
+<p>​    var a; 关键字: 标识符: a.规则：只能由数字，字母，以及下划线构成，并且首字母不能为数字。其次不要和已有关键字，库函数重名</p>
+<p>​       b.习惯：驼峰命名法</p>
+<p>变量定义后的赋值:    a &#x3D; 123;</p>
+<p>变量赋初值：var a &#x3D; 123</p>
+<p>[注意]：重复定义变量相当于赋值。但是不要这么做，切记千万不要使用没有定义过的变量名。先定义后使用</p>
+<p><strong>关键字：</strong></p>
+<p>break、else、new、var、 case、 finally 、 return、 void 、catch 、for 、switch 、 while 、 continue、 function 、this 、 with 、default 、 if 、 throw、 delete 、 in 、 try 、do 、 instranceof、 typeof</p>
+<p><strong>被保留关键字：</strong></p>
+<p>abstract 、enum  、int 、 short 、 boolean 、export 、interface、 static、 byte 、extends 、 long 、 super 、 char 、 final 、native 、synchronized 、 class 、float 、 package 、throws 、 const 、goto 、private 、transient 、 debugger 、 implements 、protected 、 volatile 、 double 、import 、public</p>
+<p><strong>数据类型：</strong></p>
+<p>内置基本类型： Undefined类型</p>
+<p>  Undefined类型只有一个值undefined，它是变量未被赋值时的值。</p>
+<p>  Null类型  Null类型也只有一个值null 。Null类型的语义是“一个空的对象引用”，注意和空字符串区别开</p>
+<p>  Boolean  类型</p>
+<p>  布尔由两种取值true和false、表示真或假。非0代表真，0代表假。</p>
+<p>  String 类型：</p>
+<p>  又叫字符串类型，用双（单）引号括起来的一串字符</p>
+<p>  Number类型</p>
+<p>引用类型：</p>
+<p>  Object</p>
+<p>  使用typeof  关键字查看变量类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age=<span class="number">20</span></span><br><span class="line"><span class="title function_">alert</span>(<span class="keyword">typeof</span> age)</span><br></pre></td></tr></table></figure>
+
+<p><strong>运算符</strong>：</p>
+<p>运算符的三要素:优先级 结合方向 操作目数</p>
+<p><strong>1.算数运算符</strong></p>
+<p>+，-，*，&#x2F;，%  求余 取模</p>
+<p><strong>2.赋值运算符：</strong></p>
+<p>&#x3D;  将等号右值赋给左值</p>
+<p>赋值表达式是有值的，值为右值   a &#x3D; b &#x3D; 5;</p>
+<p><strong>3.复合的赋值运算符：</strong></p>
+<p>+&#x3D;  -&#x3D; *&#x3D; &#x2F;&#x3D; %&#x3D;…</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line">a = a + <span class="number">5</span>;</span><br><span class="line">a += <span class="number">5</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.自增自减运算：++&#x2F; –  都是为自身加1或者减1</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">5</span>;</span><br><span class="line">i = i + <span class="number">1</span>;</span><br><span class="line">i++;		</span><br><span class="line">++i;</span><br></pre></td></tr></table></figure>
+
+<p>前++;先算再用</p>
+<p>后++;先用再算，过了分号(过了该条语句再加)</p>
+<p><strong>5，关系运算符：连接的表达式为关系表达式，结果一定为布尔值（逻辑量）</strong></p>
+<p>&gt;，&gt;&#x3D;，&lt;，&lt;&#x3D;，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">==  逻辑等，判断左右操作数是否一致   <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span> == <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">!= 逻辑不等 <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">123</span> != <span class="number">123</span>);</span><br><span class="line"></span><br><span class="line">=== 严格等，数值和类型都得相等</span><br></pre></td></tr></table></figure>
+
+<p><strong>6,逻辑运算符：</strong></p>
+<p>将关系表达式或者逻辑量，连接起来的表达式，结果是布尔值</p>
+<p><strong>&amp;&amp;</strong>  完成一件事，有N个步骤，每个步骤都得满足，整件事才能完成，各个步骤之间的关系称为与</p>
+<p><strong>||</strong>  完成一件事有N种方法，每个方法都能完成这件事，各个方法之间的关系称为或</p>
+<p><strong>！</strong> 某个条件的对立面  非</p>
+<p>短路与：首次遇到条件为假的表达式，后续的与运算将不再执行    </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = -<span class="number">5</span> &lt; i &amp;&amp; ++i &lt; -<span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+<p>短路或：首次遇到条件为真的表达式，后续的或运算将不再执行    </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> j = -<span class="number">5</span> &lt; i || ++i &lt; -<span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>7,数字和字符串的转换规则：</strong></p>
+<p><strong>隐式转换和显示转换</strong></p>
+<p>隐式转换：</p>
+<p>a,加：其结果会转换为字符串，效果等价于字符串的拼接</p>
+<p>b,除了加法以外的符号，如-,*,&#x2F;,%…结果全部转为数字</p>
+<p>显示转换：a,字符串转数字  parseInt(字符串)：返回一个整型数字</p>
+<p>问题：传入的数据如果为非数值字符串：NaN(是一个数字类型的固定值，当遇到无法计算的结果时返回)</p>
+<p>parseInt(字符串) 转为整数型   parseFloat(字符串) 转为浮点型  Number(字符串) 转为数字(整型和浮点型）		</p>
+<p>​     b,数字转字符串：</p>
+<p>​       toString( )  将数字转为其对应的字符串</p>
+<p>实际操作：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">字符串转数字：</span><br><span class="line"><span class="keyword">var</span> x = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x * <span class="number">1</span> + <span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://yangzhe0712.gitee.io">Six</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://yangzhe0712.gitee.io/2020/08/01/js%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">https://yangzhe0712.gitee.io/2020/08/01/js%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/javaScript/">javaScript</a></div><div class="post_share"><div class="social-share" data-image="https://img2.baidu.com/it/u=3258393571,209085186&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=640&amp;h=332" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/08/15/js%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF%E4%B8%8E%E5%BE%AA%E7%8E%AF/"><img class="prev-cover" src="https://img1.baidu.com/it/u=3382370226,1921570240&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=800&amp;h=320" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">javaScript基础语法（逻辑分支、循环）</div></div></a></div><div class="next-post pull-right"><a href="/2020/07/01/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E5%8F%8A%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%83%E5%B1%80/"><img class="next-cover" src="https://img0.baidu.com/it/u=3101761610,889761748&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=640&amp;h=361" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">响应式及移动端布局</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2020/09/10/ajax_promise%E5%8F%8A%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/" title="ajax与promise及本地存储"><img class="cover" src="https://img2.baidu.com/it/u=741352811,2667400721&fm=253&fmt=auto&app=138&f=PNG?w=812&h=500" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-10</div><div class="title">ajax与promise及本地存储</div></div></a></div><div><a href="/2020/09/20/es6/" title="ES6新特新"><img class="cover" src="https://img2.baidu.com/it/u=893182545,1954723487&fm=253&fmt=auto&app=138&f=JPEG?w=474&h=328" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-20</div><div class="title">ES6新特新</div></div></a></div><div><a href="/2020/08/18/js%E5%87%BD%E6%95%B0/" title="javaScript函数及变量提升"><img class="cover" src="https://img0.baidu.com/it/u=3044731428,3162464876&fm=253&fmt=auto&app=138&f=PNG?w=500&h=500" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-18</div><div class="title">javaScript函数及变量提升</div></div></a></div><div><a href="/2020/08/29/js%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6/" title="javaScript常见事件"><img class="cover" src="https://img2.baidu.com/it/u=943196091,3511083271&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=375" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-29</div><div class="title">javaScript常见事件</div></div></a></div><div><a href="/2020/08/22/js%E6%95%B0%E7%BB%84(API)%E5%92%8C%E5%AF%B9%E8%B1%A1%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2(API)/" title="javaScript数组和对象及字符串(API)"><img class="cover" src="https://img1.baidu.com/it/u=4140415617,1535576857&fm=253&fmt=auto&app=138&f=JPEG?w=640&h=320" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-22</div><div class="title">javaScript数组和对象及字符串(API)</div></div></a></div><div><a href="/2020/08/15/js%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF%E4%B8%8E%E5%BE%AA%E7%8E%AF/" title="javaScript基础语法（逻辑分支、循环）"><img class="cover" src="https://img1.baidu.com/it/u=3382370226,1921570240&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=320" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-15</div><div class="title">javaScript基础语法（逻辑分支、循环）</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.bmp.ovh/imgs/2022/08/01/c67de851c967a27e.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Six</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/02/08/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="vue组件通信、前后端交互、跨域、动态组件、nextTick原理及应用场景"><img src="https://img2.baidu.com/it/u=2671224106,2716384055&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=400&amp;h=269" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue组件通信、前后端交互、跨域、动态组件、nextTick原理及应用场景"/></a><div class="content"><a class="title" href="/2021/02/08/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="vue组件通信、前后端交互、跨域、动态组件、nextTick原理及应用场景">vue组件通信、前后端交互、跨域、动态组件、nextTick原理及应用场景</a><time datetime="2021-02-07T16:00:00.000Z" title="Created 2021-02-08 00:00:00">2021-02-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/30/vue-router/" title="vue ref、路由、插槽"><img src="https://img0.baidu.com/it/u=1538744687,3612569956&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=640&amp;h=487" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue ref、路由、插槽"/></a><div class="content"><a class="title" href="/2021/01/30/vue-router/" title="vue ref、路由、插槽">vue ref、路由、插槽</a><time datetime="2021-01-29T16:00:00.000Z" title="Created 2021-01-30 00:00:00">2021-01-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/20/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" title="vue生命周期、过滤器、自定义指令、混入及扩展"><img src="https://img2.baidu.com/it/u=3707268188,3027523069&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=500&amp;h=296" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue生命周期、过滤器、自定义指令、混入及扩展"/></a><div class="content"><a class="title" href="/2021/01/20/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" title="vue生命周期、过滤器、自定义指令、混入及扩展">vue生命周期、过滤器、自定义指令、混入及扩展</a><time datetime="2021-01-19T16:00:00.000Z" title="Created 2021-01-20 00:00:00">2021-01-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/15/vue%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BD%BF%E7%94%A8/" title="vue脚手架的使用及组件的定义使用"><img src="https://img1.baidu.com/it/u=1755482415,34002394&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=1200&amp;h=5000" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue脚手架的使用及组件的定义使用"/></a><div class="content"><a class="title" href="/2021/01/15/vue%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BD%BF%E7%94%A8/" title="vue脚手架的使用及组件的定义使用">vue脚手架的使用及组件的定义使用</a><time datetime="2021-01-14T16:00:00.000Z" title="Created 2021-01-15 00:00:00">2021-01-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/08/vue%E6%8C%87%E4%BB%A4%E5%92%8C%E7%9B%91%E5%90%AC%E4%B8%8E%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E5%8F%8A%E4%BF%AE%E9%A5%B0%E7%AC%A6/" title="vue指令和监听与计算属性及修饰符"><img src="https://img2.baidu.com/it/u=3949781130,170972349&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=PNG?w=800&amp;h=483" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue指令和监听与计算属性及修饰符"/></a><div class="content"><a class="title" href="/2021/01/08/vue%E6%8C%87%E4%BB%A4%E5%92%8C%E7%9B%91%E5%90%AC%E4%B8%8E%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E5%8F%8A%E4%BF%AE%E9%A5%B0%E7%AC%A6/" title="vue指令和监听与计算属性及修饰符">vue指令和监听与计算属性及修饰符</a><time datetime="2021-01-07T16:00:00.000Z" title="Created 2021-01-08 00:00:00">2021-01-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Six</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

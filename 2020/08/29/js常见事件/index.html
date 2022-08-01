@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="zh-cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>javaScript常见事件 | 小楊.</title><meta name="keywords" content="javaScript"><meta name="author" content="Six"><meta name="copyright" content="Six"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前端基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javaScript常见事件">
+<meta property="og:url" content="https://yangzhe0712.gitee.io/2020/08/29/js%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6/index.html">
+<meta property="og:site_name" content="小楊.">
+<meta property="og:description" content="前端基础">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img2.baidu.com/it/u=943196091,3511083271&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=375">
+<meta property="article:published_time" content="2020-08-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-01T12:38:56.719Z">
+<meta property="article:author" content="Six">
+<meta property="article:tag" content="javaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img2.baidu.com/it/u=943196091,3511083271&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=375"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yangzhe0712.gitee.io/2020/08/29/js%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'javaScript常见事件',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-08-01 20:38:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.bmp.ovh/imgs/2022/08/01/c67de851c967a27e.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://img2.baidu.com/it/u=943196091,3511083271&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=499&amp;h=375')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">小楊.</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">javaScript常见事件</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-08-28T16:00:00.000Z" title="Created 2020-08-29 00:00:00">2020-08-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-08-01T12:38:56.719Z" title="Updated 2022-08-01 20:38:56">2022-08-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="javaScript常见事件"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>javaScript常见的鼠标键盘事件：</strong></p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/08/01/8b83952812311281.png" alt="截图"></p>
+<p><strong>事件的三要素：元素，事件类型 [事件对象]</strong></p>
+<p>事件对象的作用：携带着相关事件类型的所有属性和方法</p>
+<p><strong>鼠标事件对象的属性</strong></p>
+<p>page:针对于整个页面的左顶点（常用）</p>
+<p>console.log(“page:” + e.pageX, e.pageY);</p>
+<p>client:针对于可视窗口的左顶点9</p>
+<p>console.log(“client:” + e.clientX, e.clientY);</p>
+<p>offset:针对于父级元素的左顶点（用于拖拽）</p>
+<p>console.log(“offset:” + e.offsetX, e.offsetY);</p>
+<p>当浏览器没有滚动条时（可视窗口与文档窗口重合），pageX与clientX相等，pageX与clientY相等，如果出现下拉滚动条并向下拉动滚动条，文档窗口向上滚动，如果出现左右滑动的滚动条并向右拉动滚动条，文档窗口向左滚动，在文档窗口滚动的情况下，pageX&gt;&#x3D;clientX, pageY&gt;&#x3D;clientY, x &#x3D; clientX, y &#x3D; clientY, </p>
+<p>通常情况下，键盘事件的事件元素都是document</p>
+<p>按键弹起的时刻触发</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">onkeyup</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;heihei&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>按下按键时触发</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">onkeydown</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;heihei&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>生成一个字符时触发</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">onkeypress</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;heihei&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>event对象代表事件的状态，跟事件相关的一系列信息的集合，写到函数的小括号中，当形参来看，事件对象只有有了事件才会存在，是系统自动创建，不需要传递参数，事件对象可以自己命名，比如event、evt、e</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">document</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(event);</span><br></pre></td></tr></table></figure>
+
+<p>事件对象的产生，必须有事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(event);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">onkeypress</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(event);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>事件对象获取的兼容写法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params">evt</span>) &#123;</span><br><span class="line"><span class="keyword">var</span> e = evt || event;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(e);</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>获得录入的字符的ASC码值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">String</span>.<span class="title function_">fromCharCode</span>(e.<span class="property">keyCode</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">which</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">charCode</span>);</span><br></pre></td></tr></table></figure>
+
+<p>兼容性写法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> key = e.<span class="property">keyCode</span> || e.<span class="property">which</span> || e.<span class="property">charCode</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(key);</span><br></pre></td></tr></table></figure>
+
+<p>判断ctrl是否被按下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">ctrlkey</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>事件流：</strong></p>
+<p>当某个事件执行时，从子元素向父元素触发 或 从父元素向子元素触发</p>
+<p>冒泡：子-&gt;父</p>
+<p>捕获：父-&gt;子</p>
+<p><strong>阻止事件冒泡</strong></p>
+<p>事件冒泡：开始时由最具体的元素接收，然后逐级向上传播到DOM最顶层节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e.<span class="title function_">stopPropagation</span>();</span><br><span class="line">e.<span class="property">cancelBubble</span> = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+
+<p>兼容写法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e.<span class="property">stopPropagation</span> ? e.<span class="title function_">stopPropagation</span>() : e.<span class="property">cancelBubble</span> = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>阻止浏览器默认行为</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e.<span class="title function_">preventDefault</span>();</span><br><span class="line">e.<span class="property">returnValue</span> = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+
+<p>兼容写法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e.<span class="property">preventDefault</span> ? e.<span class="title function_">preventDefault</span>() : e.<span class="property">returnValue</span> = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>事件绑定的三种方式：</strong></p>
+<p>a.通过HTML元素直接绑定</p>
+<p>b.通过js对象绑定</p>
+<p>缺陷：</p>
+<p>1，无法为同一元素多次绑定相同的事件</p>
+<p>2，无法决定事件流为冒泡还是捕获</p>
+<p><strong>c.事件的监听</strong></p>
+<p>事件元素.addEventListener(去掉on的事件名，回调函数，[捕获还是冒泡]) &#x2F; </p>
+<p>默认false为冒泡，true为捕获</p>
+<p>好处1，可以为同一元素多次绑定相同的事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="number">2</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>好处2，可以决定事件流是冒泡还是捕获</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">     <span class="title function_">alert</span>(<span class="string">&quot;document&quot;</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>);</span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">     <span class="title function_">alert</span>(<span class="string">&quot;window&quot;</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>结论：</strong>先捕获后冒泡</p>
+<p>事件的解绑</p>
+<p>通过js的方式进行解绑</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">     <span class="title function_">alert</span>(<span class="number">1</span>);</span><br><span class="line"> &#125;</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">onclick</span> = <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
+
+<p>对监听事件进行解绑</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fun = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">   <span class="title function_">alert</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, fun);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">removeEventListener</span>(<span class="string">&quot;click&quot;</span>, fun);</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>事件委托（事件代理）</strong></p>
+<p>委托：子元素的事件由父元素实现（依赖于事件冒泡）</p>
+<p><strong>好处1，可以批量的为子元素通过父元素绑定事件，提高程序运行效率</strong></p>
+<p>常规方法绑定li高亮效果</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oLis = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;li&quot;</span>);</span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; oLis.<span class="property">length</span>; i++) &#123;</span><br><span class="line">       oLis[i].<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">          <span class="variable language_">this</span>.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&quot;hotpink&quot;</span>;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>委托实现li的绑定</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oUl = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;ul&quot;</span>);</span><br><span class="line">    oUl.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params">evt</span>) &#123;</span><br><span class="line">     这里不能直接用<span class="variable language_">this</span></span><br><span class="line">      <span class="comment">//this.style.backgroundColor = &quot;hotpink&quot;;</span></span><br><span class="line">        <span class="keyword">var</span> e = evt || event;</span><br><span class="line">        获取真实的操作元素(事件源)</span><br><span class="line">        <span class="keyword">var</span> target = e.<span class="property">target</span> || e.<span class="property">srcElement</span>;</span><br><span class="line">        tagName真实操作元素的名字,用大写表示</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(target, target.<span class="property">tagName</span>);</span><br><span class="line">        <span class="keyword">if</span> (target.<span class="property">tagName</span> == <span class="string">&quot;LI&quot;</span>) &#123;</span><br><span class="line">            target.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&quot;hotpink&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>e.target可以得到我们点击的对象</p>
+<p><strong>好处2，可以为未来添加的元素提前绑定事件</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">onscroll</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;heihei&quot;</span>);</span><br><span class="line">兼容性获取滚动条高度</span><br><span class="line">读</span><br><span class="line"><span class="keyword">var</span> _top = <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">scrollTop</span> || <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">scrollTop</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(_top);</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">var</span> oBtn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;button&quot;</span>);</span><br><span class="line">    oBtn.<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">//写</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">scrollTop</span> = <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">scrollTop</span> = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://yangzhe0712.gitee.io">Six</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://yangzhe0712.gitee.io/2020/08/29/js%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6/">https://yangzhe0712.gitee.io/2020/08/29/js%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/javaScript/">javaScript</a></div><div class="post_share"><div class="social-share" data-image="https://img2.baidu.com/it/u=943196091,3511083271&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=499&amp;h=375" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/09/01/%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1/"><img class="prev-cover" src="https://img1.baidu.com/it/u=3448210232,3567283849&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=428&amp;h=252" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">javaScript函数对象、继承、深浅拷贝、闭包</div></div></a></div><div class="next-post pull-right"><a href="/2020/08/22/js%E6%95%B0%E7%BB%84(API)%E5%92%8C%E5%AF%B9%E8%B1%A1%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2(API)/"><img class="next-cover" src="https://img1.baidu.com/it/u=4140415617,1535576857&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=640&amp;h=320" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">javaScript数组和对象及字符串(API)</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2020/09/10/ajax_promise%E5%8F%8A%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/" title="ajax与promise及本地存储"><img class="cover" src="https://img2.baidu.com/it/u=741352811,2667400721&fm=253&fmt=auto&app=138&f=PNG?w=812&h=500" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-10</div><div class="title">ajax与promise及本地存储</div></div></a></div><div><a href="/2020/09/20/es6/" title="ES6新特新"><img class="cover" src="https://img2.baidu.com/it/u=893182545,1954723487&fm=253&fmt=auto&app=138&f=JPEG?w=474&h=328" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-20</div><div class="title">ES6新特新</div></div></a></div><div><a href="/2020/08/01/js%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="javaScript基础语法（变量、运算符）"><img class="cover" src="https://img2.baidu.com/it/u=3258393571,209085186&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=332" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-01</div><div class="title">javaScript基础语法（变量、运算符）</div></div></a></div><div><a href="/2020/08/18/js%E5%87%BD%E6%95%B0/" title="javaScript函数及变量提升"><img class="cover" src="https://img0.baidu.com/it/u=3044731428,3162464876&fm=253&fmt=auto&app=138&f=PNG?w=500&h=500" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-18</div><div class="title">javaScript函数及变量提升</div></div></a></div><div><a href="/2020/08/22/js%E6%95%B0%E7%BB%84(API)%E5%92%8C%E5%AF%B9%E8%B1%A1%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2(API)/" title="javaScript数组和对象及字符串(API)"><img class="cover" src="https://img1.baidu.com/it/u=4140415617,1535576857&fm=253&fmt=auto&app=138&f=JPEG?w=640&h=320" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-22</div><div class="title">javaScript数组和对象及字符串(API)</div></div></a></div><div><a href="/2020/08/15/js%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF%E4%B8%8E%E5%BE%AA%E7%8E%AF/" title="javaScript基础语法（逻辑分支、循环）"><img class="cover" src="https://img1.baidu.com/it/u=3382370226,1921570240&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=320" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-15</div><div class="title">javaScript基础语法（逻辑分支、循环）</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.bmp.ovh/imgs/2022/08/01/c67de851c967a27e.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Six</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/02/08/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="vue组件通信、前后端交互、跨域、动态组件、nextTick原理及应用场景"><img src="https://img2.baidu.com/it/u=2671224106,2716384055&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=400&amp;h=269" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue组件通信、前后端交互、跨域、动态组件、nextTick原理及应用场景"/></a><div class="content"><a class="title" href="/2021/02/08/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="vue组件通信、前后端交互、跨域、动态组件、nextTick原理及应用场景">vue组件通信、前后端交互、跨域、动态组件、nextTick原理及应用场景</a><time datetime="2021-02-07T16:00:00.000Z" title="Created 2021-02-08 00:00:00">2021-02-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/30/vue-router/" title="vue ref、路由、插槽"><img src="https://img0.baidu.com/it/u=1538744687,3612569956&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=640&amp;h=487" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue ref、路由、插槽"/></a><div class="content"><a class="title" href="/2021/01/30/vue-router/" title="vue ref、路由、插槽">vue ref、路由、插槽</a><time datetime="2021-01-29T16:00:00.000Z" title="Created 2021-01-30 00:00:00">2021-01-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/20/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" title="vue生命周期、过滤器、自定义指令、混入及扩展"><img src="https://img2.baidu.com/it/u=3707268188,3027523069&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=500&amp;h=296" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue生命周期、过滤器、自定义指令、混入及扩展"/></a><div class="content"><a class="title" href="/2021/01/20/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" title="vue生命周期、过滤器、自定义指令、混入及扩展">vue生命周期、过滤器、自定义指令、混入及扩展</a><time datetime="2021-01-19T16:00:00.000Z" title="Created 2021-01-20 00:00:00">2021-01-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/15/vue%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BD%BF%E7%94%A8/" title="vue脚手架的使用及组件的定义使用"><img src="https://img1.baidu.com/it/u=1755482415,34002394&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=1200&amp;h=5000" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue脚手架的使用及组件的定义使用"/></a><div class="content"><a class="title" href="/2021/01/15/vue%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BD%BF%E7%94%A8/" title="vue脚手架的使用及组件的定义使用">vue脚手架的使用及组件的定义使用</a><time datetime="2021-01-14T16:00:00.000Z" title="Created 2021-01-15 00:00:00">2021-01-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/08/vue%E6%8C%87%E4%BB%A4%E5%92%8C%E7%9B%91%E5%90%AC%E4%B8%8E%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E5%8F%8A%E4%BF%AE%E9%A5%B0%E7%AC%A6/" title="vue指令和监听与计算属性及修饰符"><img src="https://img2.baidu.com/it/u=3949781130,170972349&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=PNG?w=800&amp;h=483" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue指令和监听与计算属性及修饰符"/></a><div class="content"><a class="title" href="/2021/01/08/vue%E6%8C%87%E4%BB%A4%E5%92%8C%E7%9B%91%E5%90%AC%E4%B8%8E%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E5%8F%8A%E4%BF%AE%E9%A5%B0%E7%AC%A6/" title="vue指令和监听与计算属性及修饰符">vue指令和监听与计算属性及修饰符</a><time datetime="2021-01-07T16:00:00.000Z" title="Created 2021-01-08 00:00:00">2021-01-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Six</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
