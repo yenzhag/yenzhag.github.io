@@ -23,6 +23,8 @@
       rgba(7, 179, 155, 0.1) 86%,
       rgba(109, 186, 130, 0.1) 100%
       );
+      background-size: cover;
+      background-repeat: no-repeat;
 }
 #footer-wrap{
    color: #777;
@@ -31,10 +33,6 @@
    color: #777;
 }
 
-#page-header{
-   background-size: cover;
-   background-repeat: no-repeat;
-}
 body {
    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
        default;
